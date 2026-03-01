@@ -1,0 +1,7 @@
+{
+  "name": "CleanCity",
+  "description": "A community-driven platform for reporting pollution, organizing cleanup events, and tracking environmental impact.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

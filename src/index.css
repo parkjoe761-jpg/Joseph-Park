@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-forest: #1a3a2a;
+  --color-moss: #2d5a3d;
+  --color-sage: #4a7c59;
+  --color-lime: #8bc34a;
+  --color-acid: #c6f135;
+  --color-cream: #f5f0e8;
+  --color-sand: #e8dfc8;
+  --color-rust: #c44b2b;
+  --color-amber: #f59e0b;
+  --color-sky: #38bdf8;
+  --color-dark: #0f1f17;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-dark font-sans;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl border border-forest/10 p-6 transition-all duration-200 hover:shadow-xl hover:shadow-forest/5;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-semibold transition-all duration-200 active:scale-95 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply bg-forest text-white hover:bg-moss;
+  }
+
+  .btn-acid {
+    @apply bg-acid text-forest hover:bg-[#d4f045];
+  }
+
+  .btn-ghost {
+    @apply bg-transparent border border-forest/10 text-dark hover:bg-sand;
+  }
+
+  .btn-danger {
+    @apply bg-rust/10 text-rust hover:bg-rust/20;
+  }
+
+  .input {
+    @apply w-full px-4 py-2.5 rounded-xl border border-forest/10 bg-cream/50 focus:bg-white focus:border-sage outline-none transition-all;
+  }
+}
